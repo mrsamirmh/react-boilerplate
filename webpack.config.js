@@ -1,6 +1,7 @@
 let path = require('path');
 let nodeExternals = require('webpack-node-externals');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const moduleObj = {
     rules: [
@@ -39,8 +40,15 @@ const client = {
     module: moduleObj,
     plugins: [
         new HtmlWebPackPlugin({
-            template: 'src/client/index.html'
-        })
+            template: './src/client/index.html',
+        }),
+        new Dotenv(
+            {
+                safe: true,
+                systemvars: true,
+                silent: false
+            }
+        )
     ]
 };
 const server = {

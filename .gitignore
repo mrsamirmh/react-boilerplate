@@ -1,6 +1,11 @@
 # Node
 node_modules/
+
 # Webstorm
 .idea/
+
 # Project
 dist/
+
+# .env
+.env

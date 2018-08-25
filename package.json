@@ -4,7 +4,8 @@
   "description": "Custom React Boilerplate",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --watch --mode development",
+    "build --prod": "webpack --mode production",
     "build-babel": "npm run build-babel-server && npm run build-babel-client",
     "build-babel-server": "babel src/server --out-dir ./dist",
     "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
@@ -30,11 +31,13 @@
   },
   "homepage": "https://github.com/mrsamirmh/react-boilerplate#readme",
   "dependencies": {
+    "dotenv-webpack": "^1.5.7",
     "express": "^4.16.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "rimraf": "^2.6.2",
-    "webpack": "^4.17.1"
+    "webpack": "^4.17.1",
+    "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
