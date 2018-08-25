@@ -1,0 +1,51 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "Custom React Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-babel": "npm run build-babel-server && npm run build-babel-client",
+    "build-babel-server": "babel src/server --out-dir ./dist",
+    "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/server.js",
+    "clean": "rimraf ./dist ./node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsamirmh/react-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "custom",
+    "basic",
+    "simple",
+    "nodejs"
+  ],
+  "author": "Samir Mammadhasanov <contact@mrsamir.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrsamirmh/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mrsamirmh/react-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
